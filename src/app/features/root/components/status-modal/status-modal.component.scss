@@ -1,0 +1,14 @@
+@import 'src/app/styles/font-helpers';
+
+p, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-container, .body {
+  height: 100%;
+}
+
+.body {
+  @include body-small;
+}

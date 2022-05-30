@@ -1,0 +1,29 @@
+@import 'src/app/styles/font-helpers';
+@import 'src/app/styles/variables';
+
+p, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-container, .body {
+  height: 100%;
+}
+
+.header-section, .body {
+  margin-bottom: 24px;
+}
+
+.header-section {
+  @include body-medium;
+}
+
+.body {
+  margin-left: 36px;
+  @include body-small;
+}
+
+.error-icon {
+  margin-right: 12px;
+  color: $error;
+}

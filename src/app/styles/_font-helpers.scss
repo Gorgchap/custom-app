@@ -1,0 +1,201 @@
+@import 'src/app/styles/variables';
+
+@mixin headline-4-font {
+  /* Headline 4 */
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 24px;
+
+  /* identical to box height, or 55% */
+  letter-spacing: 0.25px;
+
+  /* Black/800 */
+  color: $black-800;
+}
+
+@mixin headline-5-font {
+  /* Headline 5 */
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height, or 100% */
+  letter-spacing: 0;
+
+  /* Black/800 */
+  color: $black-800;
+}
+
+@mixin headline-6-font {
+  /* Headline 6 */
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  /* identical to box height, or 120% */
+  letter-spacing: 0.15px;
+
+  /* Black/800 */
+  color: $black-800;
+}
+
+@mixin subtitle-1-font {
+  /* Subtitle 1 */
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  /* identical to box height, or 150% */
+  letter-spacing: 0.15px;
+
+  /* Black / 800 */
+  color: $black-800;
+}
+
+@mixin subtitle-2-font {
+  /* Subtitle 2 */
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  /* identical to box height, or 150% */
+  letter-spacing: 0.1px;
+
+  /* Black / 800 */
+  color: $black-800;
+}
+
+@mixin body-semibold-font {
+  /* Body SemiBold */
+  font-family: Open Sans, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+
+  /* identical to box height, or 143% */
+  letter-spacing: 0.25px;
+
+  /* Black/900 */
+  color: $black-900;
+}
+
+@mixin body-regular-font {
+  /* Body Regular */
+  font-family: Open Sans, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+
+  /* identical to box height, or 143% */
+  letter-spacing: 0.25px;
+
+  /* Blue/400 */
+  color: $blue-400;
+
+}
+
+@mixin overline-font {
+  /* OVERLINE */
+  font-family: Open Sans, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+
+  /* identical to box height, or 140% */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  /* Black/900 */
+  color: $black-900;
+}
+
+@mixin caption-font {
+  /* Caption */
+  font-family: Open Sans, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+
+  /* identical to box height, or 133% */
+  letter-spacing: 0.4px;
+
+  /* Black/900 */
+  color: $black-900;
+}
+
+@mixin button-font {
+  font-family: Open Sans, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black-600;
+  cursor: pointer;
+  transition: color 200ms;
+  &:hover {
+    color: $blue-400;
+  }
+}
+
+@mixin text-overflow($font-size, $line-height, $line-clamp) {
+  display: -webkit-box;
+  font-size: $font-size;
+  line-height: $line-height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line-clamp;
+  -webkit-box-orient: vertical;
+}
+
+.overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin body-small {
+  font-family: Open Sans, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+@mixin body-medium {
+  font-family: Open Sans, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25px;
+  color: $black-900;
+}
+
+
+@mixin subtitle-small {
+  font-family: Open Sans, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}

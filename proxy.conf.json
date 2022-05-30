@@ -1,0 +1,7 @@
+{
+  "/": {
+    "target": "https://aws.random.cat/meow",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

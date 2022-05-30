@@ -1,0 +1,124 @@
+@import 'src/app/styles/variables';
+
+.round-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  border: none;
+
+  /* Blue/400 */
+  background: $blue-400;
+
+  /* Shadow Medium */
+  box-shadow: 0 6px 20px rgba(68, 69, 78, 0.13);
+  border-radius: 22px;
+
+  /* BUTTON */
+  font-family: Open Sans, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+
+  /* identical to box height, or 171% */
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+
+  /* Black / 0 */
+  color: $black-0;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: default;
+  }
+
+  &.no-background {
+    background-color: transparent;
+  }
+
+  &.border {
+    border: 1px solid $blue-400;
+  }
+
+  &.blue {
+    color: $blue-400;
+  }
+
+  &.grey {
+    color: $black-600;
+  }
+
+  &.no-shadow {
+    box-shadow: none;
+  }
+}
+
+.text-button {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+@mixin close-button($height, $width, $color, $hover-color, $indent, $left: true) {
+
+  &:before,
+  &:after {
+    position: absolute;
+
+    content: "";
+    height: $height;
+    width: $width;
+    background-color: $color;
+    border-radius: 1px;
+    transition: background-color 200ms;
+    top: 50%;
+
+    @if $left {
+      left: $indent;
+    } @else {
+      right: $indent;
+    }
+
+  }
+
+  &:hover:before,
+  &:hover:after {
+    background-color: $hover-color;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes button-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button-spinner {
+  position: relative;
+
+  &:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid $black-0;
+    border-top-color: $black-900;
+    animation: button-spinner .8s linear infinite;
+  }
+}

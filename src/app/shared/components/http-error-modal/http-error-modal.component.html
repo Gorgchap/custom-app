@@ -1,0 +1,18 @@
+<div class="modal-container flex flex-col justify-between">
+  <div class="header-section flex items-center">
+    <mat-icon class="error-icon">error</mat-icon>
+    <h4>There is a problem</h4>
+  </div>
+  <div class="body flex justify-between flex-col">
+    <ng-template [ngIf]="message">
+      <p>{{message}}</p>
+    </ng-template>
+    <ng-template [ngIf]="!message">
+      <p>We are really sorry.</p>
+      <p>We are working to fix it as soon as possible. Please wait a few minutes and try again.</p>
+    </ng-template>
+  </div>
+  <div class="control-section flex justify-end">
+    <button (click)="handleAgree()" class="round-button uppercase">understood</button>
+  </div>
+</div>

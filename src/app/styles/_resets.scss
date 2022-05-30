@@ -1,0 +1,32 @@
+@import 'src/app/styles/variables';
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $grey;
+  border-radius: 5px;
+}
+
+/* Firefox */
+@supports (-moz-appearance: none) {
+  * {
+    scrollbar-color: $grey transparent;
+    scrollbar-width: thin;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', "Helvetica Neue", sans-serif;
+}
